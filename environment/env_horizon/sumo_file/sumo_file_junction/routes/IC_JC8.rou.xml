@@ -1,0 +1,129 @@
+<routes>
+
+    <vType id="car_1" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="4.5" maxSpeed="4.5" speedFactor="normc(1,0.15,0.88,1.12)" speedDev="0"
+           color="red" vClass="passenger" guiShape="passenger" impatience="0" laneChangeModel="LC2013"
+           carFollowModel="Krauss" minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.5"/>
+    <vType id="car_2" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="4.5" maxSpeed="4.5" speedFactor="normc(1,0.15,0.88,1.12)" speedDev="0"
+           color="255,255,0" vClass="passenger" guiShape="passenger" impatience="0" laneChangeModel="LC2013"
+           carFollowModel="Krauss" minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.5"/>
+    <vType id="car_3" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="4.5" maxSpeed="4.5" speedFactor="normc(1,0.15,0.88,1.12)" speedDev="0"
+           color="255,255,255,186" vClass="passenger" guiShape="passenger" impatience="0" laneChangeModel="LC2013"
+           carFollowModel="Krauss" latAlignment="center" minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.5"/>
+    <vType id="car_4" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="10.5" maxSpeed="4.5" speedFactor="normc(1,0.15,0.88,1.12)" speedDev="0"
+           color="255,255,0" vClass="passenger" guiShape="passenger" impatience="0" laneChangeModel="LC2013"
+           carFollowModel="Krauss" latAlignment="center" minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.5"/>
+
+    <vType id="car_5" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="5.5" maxSpeed="4.5" speedFactor="normc(1,0.15,0.88,1.12)" speedDev="0"
+           color="blue" vClass="passenger" guiShape="passenger" impatience="0" laneChangeModel="LC2013"
+           carFollowModel="Krauss" minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.5"/>
+    <vType id="car_6" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="6.5" maxSpeed="4.5" speedFactor="normc(1,0.15,0.88,1.12)" speedDev="0"
+           color="green" vClass="passenger" guiShape="passenger" impatience="0" laneChangeModel="LC2013"
+           carFollowModel="Krauss" latAlignment="center" minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.5"/>
+    <vType id="car_7" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="5.5" maxSpeed="4.5" speedFactor="normc(1,0.15,0.88,1.12)" speedDev="0"
+           color="blue" vClass="passenger" guiShape="passenger" impatience="0" laneChangeModel="LC2013"
+           carFollowModel="Krauss" latAlignment="center" minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.5"/>
+    <vType id="car_8" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="6.5" maxSpeed="4.5" speedFactor="normc(1,0.15,0.88,1.12)" speedDev="0"
+           color="white" vClass="passenger" guiShape="passenger" impatience="0" laneChangeModel="LC2013"
+           carFollowModel="Krauss" latAlignment="center" minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.5"/>
+
+    <vType id="bicycle_1" length="2" width="0.48" minGap="1" maxSpeed="3.5" vClass="bicycle" jmCrossingGap="2" carFollowModel="Krauss" lcSigma="0.9"/>
+    <vType id="bicycle_2" length="2" width="0.48" minGap="1" maxSpeed="3.5" vClass="bicycle" jmCrossingGap="2" carFollowModel="Krauss" lcSigma="0.7"/>
+    <vType id="bicycle_3" length="2" width="0.48" minGap="1" maxSpeed="3.5" vClass="bicycle" jmCrossingGap="2" carFollowModel="Krauss" lcSigma="0.5"/>
+    <vType id="self_car" length="5" width="1.8" accel="3.5" decel="2.2" sigma="1.0" guiShape="passenger/wagon"
+           color="1,0,1" jmCrossingGap="3" maxSpeed="30"/>
+    <route id="self" edges="EE6 ES8 ES9 EE10 EE11 EN15 EN14 EN13
+        EN12 EW8 EW7 EW6 EW5 EW4 EN4 EN3 EE2 ES7 EW6 "/>
+
+<!--            <lanechange.duration value="3"/>-->
+<!--flow 1.East 2.South 3.West 4.North-->
+<!--flow .0 straight  .1 right  .2 left-->
+    <flow id="carflow_1.0" type="car_1" begin="0" end="999999" from="EW10" to="EW9" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <flow id="carflow_1.1" type="car_2" begin="0" end="999999" from="EW10" to="EN9" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <flow id="carflow_1.2" type="car_3" begin="0" end="999999" from="EW10" to="ES10" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <flow id="carflow_1.3" type="bicycle_1" begin="0" end="999999" from="EW10" to="EW9" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="30"/>
+    <flow id="carflow_1.4" type="bicycle_2" begin="0" end="999999" from="EW10" to="EN9" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <personFlow id="person0" type="DEFAULT_PEDTYPE" begin="0" end="999999"  departPos="random" personsPerHour="100" >
+       <walk edges=" EW10 EW9 "/>
+    </personFlow>
+
+
+    <flow id="carflow_2.0" type="car_4" begin="0" end="999999" from="EN10" to="EN9" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="80"/>
+    <flow id="carflow_2.1" type="car_5" begin="0" end="999999" from="EN10" to="EE10" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <flow id="carflow_2.2" type="car_6" begin="0" end="999999" from="EN10" to="EW9" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <flow id="carflow_2.3" type="bicycle_1" begin="0" end="999999" from="EN10" to="EN9" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="30"/>
+    <flow id="carflow_2.4" type="bicycle_2" begin="0" end="999999" from="EN10" to="EE10" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <personFlow id="person1" type="DEFAULT_PEDTYPE" begin="0" end="999999"  departPos="random" personsPerHour="100" >
+       <walk edges=" EN10 EN9 "/>
+    </personFlow>
+
+
+    <flow id="carflow_3.0" type="car_7" begin="0" end="999999" from="EE9" to="EE10" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <flow id="carflow_3.1" type="car_8" begin="0" end="999999" from="EE9" to="ES10" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <flow id="carflow_3.2" type="car_1" begin="0" end="999999" from="EE9" to="EN9" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <flow id="carflow_3.3" type="bicycle_1" begin="0" end="999999" from="EE9" to="EE10" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="30"/>
+    <flow id="carflow_3.4" type="bicycle_2" begin="0" end="999999" from="EE9" to="ES10" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <personFlow id="person2" type="DEFAULT_PEDTYPE" begin="0" end="999999"  departPos="random" personsPerHour="100" >
+       <walk edges=" EE9 EE10 "/>
+    </personFlow>
+
+
+    <flow id="carflow_4.0" type="car_2" begin="0" end="999999" from="ES9" to="ES10" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <flow id="carflow_4.1" type="car_3" begin="0" end="999999" from="ES9" to="EW9" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <flow id="carflow_4.2" type="car_4" begin="0" end="999999" from="ES9" to="EE10" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="80"/>
+    <flow id="carflow_4.3" type="bicycle_1" begin="0" end="999999" from="ES9" to="ES10" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="30"/>
+    <flow id="carflow_4.4" type="bicycle_2" begin="0" end="999999" from="ES9" to="EW9" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="50"/>
+    <personFlow id="person3" type="DEFAULT_PEDTYPE" begin="0" end="999999"  departPos="random" personsPerHour="100" >
+       <walk edges=" ES9 ES10 "/>
+    </personFlow>
+
+
+    <route id="ru" edges="EW10 EN9"/>
+    <route id="rd" edges="EW10 ES10"/>
+    <route id="rl" edges="EW10 EW9"/>
+
+    <route id="lr" edges="EE9 EE10"/>
+    <route id="lu" edges="EE9 EN9"/>
+    <route id="ld" edges="EE9 ES10"/>
+
+    <route id="dl" edges="EN10 EW9"/>
+    <route id="dr" edges="EN10 EE10"/>
+    <route id="du" edges="EN10 EN9"/>
+
+    <route id="ud" edges="ES9 ES10"/>
+    <route id="ul" edges="ES9 EW9"/>
+    <route id="ur" edges="ES9 EE10"/>
+    <route id="circle" edges="a1toa2 a2toa3 a3toa4 a4toa1"/>
+
+    <vehicle id="collector" type="car_1" route="circle" depart="0"/>
+
+
+
+</routes>

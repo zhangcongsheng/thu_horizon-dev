@@ -1,0 +1,524 @@
+<routes>
+
+    <vType id="car_1" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="4.5" maxSpeed="8" speedDev="0" color="red" vClass="passenger"
+           guiShape="passenger" impatience="0" laneChangeModel="LC2013" carFollowModel="Krauss"
+           minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.3"/>
+    <vType id="car_2" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="4.5" maxSpeed="8" speedDev="0" color="255,255,0" vClass="passenger"
+           guiShape="passenger" impatience="0" laneChangeModel="LC2013" carFollowModel="Krauss"
+           minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.3"/>
+    <vType id="car_3" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="4.5" maxSpeed="7" speedDev="0" color="255,255,255,186" vClass="passenger"
+           guiShape="passenger" impatience="0" laneChangeModel="LC2013" carFollowModel="Krauss" latAlignment="center"
+           minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.3"/>
+    <vType id="car_4" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="10.5" maxSpeed="8" speedDev="0" color="255,255,0" vClass="passenger"
+           guiShape="passenger" impatience="0" laneChangeModel="LC2013" carFollowModel="Krauss" latAlignment="center"
+           minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.3"/>
+
+    <vType id="car_5" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="5.5" maxSpeed="8" speedDev="0" color="blue" vClass="passenger"
+           guiShape="passenger" impatience="0" laneChangeModel="LC2013" carFollowModel="Krauss"
+           minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.3"/>
+    <vType id="car_6" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="6.5" maxSpeed="8" speedDev="0" color="green" vClass="passenger"
+           guiShape="passenger" impatience="0" laneChangeModel="LC2013" carFollowModel="Krauss" latAlignment="center"
+           minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.3"/>
+    <vType id="car_7" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="5.5" maxSpeed="7" speedDev="0" color="blue" vClass="passenger"
+           guiShape="passenger" impatience="0" laneChangeModel="LC2013" carFollowModel="Krauss" latAlignment="center"
+           minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.3"/>
+    <vType id="car_8" length="4.8" width="2.0" accel="2.6" decel="4.5" apparentDecel="4.5" emergencyDecel="4.5"
+           sigma="0.0" tau="1" minGap="6.5" maxSpeed="8" speedDev="0" color="white" vClass="passenger"
+           guiShape="passenger" impatience="0" laneChangeModel="LC2013" carFollowModel="Krauss" latAlignment="center"
+           minGapLat="0.3" jmCrossingGap="3" maxSpeedLat="1" lcSigma="0.3"/>
+
+    <vType id="bicycle_1" length="2" width="0.48" minGap="1" maxSpeed="3.5" vClass="bicycle" jmCrossingGap="2" carFollowModel="Krauss" lcSigma="0.3"/>
+    <vType id="bicycle_2" length="2" width="0.48" minGap="1" maxSpeed="3.5" vClass="bicycle" jmCrossingGap="2" carFollowModel="Krauss" lcSigma="0.4"/>
+    <vType id="bicycle_3" length="2" width="0.48" minGap="1" maxSpeed="3.5" vClass="bicycle" jmCrossingGap="2" carFollowModel="Krauss" lcSigma="0.3"/>
+    <vType id="self_car" length="5" width="1.8" accel="3.5" decel="2.2" sigma="1.0" guiShape="passenger/wagon"
+           color="1,0,1" jmCrossingGap="3" maxSpeed="30"/>
+
+    <route id="self" edges="EE6 ES8 ES9 EE10 EE11 EN15 EN14 EN13
+        EN12 EW8 EW7 EW6 EW5 EW4 EN4 EN3 EE2 ES7 EW6 "/>
+
+  <!-- <The crossroad of Southwest>-->
+    <flow id="carflow_1.1" type="car_2" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="100">
+        <route id="route1.1" edges="EN5 EN4 EN3 EN2 EN1"/>
+    </flow>
+    <flow id="carflow_1.2" type="car_3" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="100">
+        <route id="route1.2" edges="EN5 EN4 EN3 EW1"/>
+    </flow>
+    <flow id="carflow_1.3" type="car_4" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="70">
+        <route id="route1.3" edges="EN5 EE4 EE5 EE6 EN7 EN6"/>
+    </flow>
+    <flow id="carflow_1.4" type="car_5" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+        <route id="route1.4" edges="EN5 EE4 EE5 EE6 EE7 EE8 ES12 ES13 ES14 ES15 ES16"/>
+    </flow>
+    <flow id="carflow_1.5" type="car_2" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+        <route id="route1.4" edges="EN5 EE4 EE5 EE6 ES8 ES9 ES10"/>
+    </flow>
+
+
+    <flow id="carflow_1.6" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+        <route id="route1.4" edges="EN5 EE4 EE5 EE6 EE7 EE8 EN11"/>
+    </flow>
+    <flow id="carflow_1.7" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="30">
+        <route id="route1.4" edges="EN5 EN4 EN3 EW1"/>
+    </flow>
+    <flow id="carflow_1.8" type="bicycle_2" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="30">
+            <route id="route1.4" edges="EN5 EN4 EN3 EN2 EN1"/>
+    </flow>
+
+
+    <personFlow id="person1.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="50" >
+       <walk edges=" EN5 EN4 EN3 EN2 EN1 "/>
+    </personFlow>
+    <personFlow id="person1.1" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="50" >
+       <walk edges=" EN5 EN4 EN3 EW1 "/>
+    </personFlow>
+
+
+
+
+
+  <!-- <The crossroad of North>-->
+ <flow id="carflow_2.0" type="car_1" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+        <route id="route2.0" edges="ES6 EW2 ES3 ES4 ES5"/>
+ </flow>
+ <flow id="carflow_2.1" type="car_2" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+        <route id="route2.1" edges="ES6 ES7 EE7 EE8 ES12 ES13 ES14 ES15 ES16"/>
+ </flow>
+ <flow id="carflow_2.2" type="car_3" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="30">
+            <route id="route2.2" edges="ES6 ES7 ES8 ES9 EW9"/>
+ </flow>
+ <flow id="carflow_2.3" type="car_3" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+            <route id="route2.3" edges="EW3 EN6"/>
+ </flow>
+
+
+ <flow id="carflow_2.4" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+      departPos="random" departSpeed="random" vehsPerHour="20">
+    <route id="route2.4" edges="ES6 ES7 ES8 ES9 EW9"/>
+ </flow>
+ <flow id="carflow_2.5" type="bicycle_2" begin="0" end="999999" beg="0" departLane="1"
+      departPos="random" departSpeed="random" vehsPerHour="20">
+        <route id="route2.5" edges="ES6 ES7 EE7 EE8 EN11"/>
+ </flow>
+ <flow id="carflow_2.6" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+      departPos="random" departSpeed="random" vehsPerHour="20">
+        <route id="route2.6" edges="ES6 ES7 ES8 ES9 EE10 EE11 ES16"/>
+ </flow>
+
+
+
+    <personFlow id="person2.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="50" >
+       <walk edges="ES6 ES7 EE7 EE8 EN11"/>
+    </personFlow>
+    <personFlow id="person2.1" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges=" ES6 ES7 EW6 EO2 "/>
+    </personFlow>
+    <personFlow id="person2.2" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="50" >
+       <walk edges="ES6 ES7 EE7 EO4"/>
+    </personFlow>
+
+
+
+
+
+
+<!-- <The crossroad of SouthEast>-->
+    <flow id="carflow_3.0" type="car_4" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+        <route id="route3.0" edges="EN16 EN15 EN14 EN13 EN12 EN11"/>
+ </flow>
+
+    <flow id="carflow_3.1" type="car_5" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+            <route id="route3.1" edges="EN16 EW11 EW10 EN9 EN8 EN7 EW2 EW1"/>
+ </flow>
+
+    <flow id="carflow_3.2" type="car_8" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+        <route id="route3.2" edges="EN16 EW11 EW10 EN9 EN8 EW6 EW5 EW4 EN4 EN3 EN2 EN1"/>
+ </flow>
+
+    <flow id="carflow_3.3" type="car_1" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+        <route id="route3.3" edges="EN16 EN15 EN14 EN13 EN12 EW8 EW7 EN7 EN6"/>
+ </flow>
+
+
+    <flow id="carflow_3.4" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+        <route id="route3.4" edges="EN16 EN15 EN14 EN13 EN12 EW8 EW7 EN7 EN6"/>
+ </flow>
+    <flow id="carflow_3.5" type="bicycle_2" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="20">
+            <route id="route3.5" edges="EN16 EW11 EW10 EN9 EN8 EW6 EW5 EW4 EN4 EN3 EN2 EN1"/>
+ </flow>
+    <flow id="carflow_3.6" type="bicycle_2" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="20">
+        <route id="route3.6" edges="EN16 EN15 EN14 EN13 EN12 EN11"/>
+ </flow>
+
+
+    <personFlow id="person3.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="50" >
+       <walk edges=" EN16 EN15 EN14 EN13 EN12 EN11"/>
+    </personFlow>
+    <personFlow id="person3.1" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges=" EN16 EW11 EW10 EN9 EN8 EN7 EN6"/>
+    </personFlow>
+
+
+
+
+
+
+
+<!-- <The crossroad of South>-->
+<flow id="carflow_4.0" type="car_1" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+        <route id="route4.0" edges="EN10 EE10 EE11 EN15 EN14 EN13 EN12 EN11"/>
+ </flow>
+    <flow id="carflow_4.1" type="car_2" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+        <route id="route4.1" edges="EN10 EW9"/>
+ </flow>
+    <flow id="carflow_4.2" type="car_3" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+            <route id="route4.2" edges="EN10 EN9 EN8 EE7 EE8 EN11"/>
+ </flow>
+    <flow id="carflow_4.3" type="car_4" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+            <route id="route4.3" edges="EN10 EN9 EN8 EN7 EW2 EN2 EN1"/>
+ </flow>
+    <flow id="carflow_4.4" type="car_4" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+            <route id="route4.4" edges="EE9 ES10"/>
+ </flow>
+
+
+
+    <flow id="carflow_4.5" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+            <route id="route4.5" edges="EN10 EN9 EN8 EN7 EW2 EN2 EN1"/>
+ </flow>
+    <flow id="carflow_4.6" type="bicycle_2" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+        <route id="route4.6" edges="EN10 EN9 EN8 EE7 EE8 EN11"/>
+ </flow>
+    <flow id="carflow_4.7" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="20">
+            <route id="route4.7" edges="EN10 EE10 EE11 EN15 EN14 EN13 EN12 EN11"/>
+ </flow>
+
+
+    <personFlow id="person4.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="40" >
+       <walk edges=" EW10 EW9 "/>
+    </personFlow>
+    <personFlow id="person4.1" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="20" >
+       <walk edges=" EN10 EE10 EE11 EN15 EN14 EN13 EN12 EN11"/>
+    </personFlow>
+    <personFlow id="person4.2" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges=" EN10 EN9 EN8 EN7 EE3"/>
+    </personFlow>
+
+
+
+
+
+
+<!-- <The crossroad of NorthWest>-->
+    <flow id="carflow_5.0" type="car_1" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="100">
+        <route id="route5.0" edges="EE1 EN2 EN1"/>
+ </flow>
+    <flow id="carflow_5.1" type="car_2" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="80">
+            <route id="route5.1" edges="EE1 ES3 ES4 ES5"/>
+ </flow>
+    <flow id="carflow_5.2" type="car_3" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="100">
+                <route id="route5.2" edges="EE1 EE2 EE3"/>
+ </flow>
+    <flow id="carflow_5.3" type="car_4" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+                <route id="route5.3" edges="EE1 EE2 ES7 ES8 ES9 ES10"/>
+ </flow>
+    <flow id="carflow_5.4" type="car_5" begin="0" end="999999" beg="0"  departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="70">
+                <route id="route5.4" edges="EE1 EE2 ES7 EE7 EE8 ES12 ES13 ES14 ES15 ES16 "/>
+ </flow>
+
+    <flow id="carflow_5.5" type="car_5" begin="0" end="999999" beg="0"  departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="60">
+                <route id="route5.5" edges="ES1 ES2 EW1 "/>
+ </flow>
+
+
+    <flow id="carflow_5.6" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="30">
+            <route id="route5.6" edges="EE1 EE2 ES7 EE7 EE8 ES12 ES13 ES14 ES15 ES16 "/>
+ </flow>
+
+    <flow id="carflow_5.7" type="bicycle_2" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="20">
+           <route id="route5.7" edges="EE1 EE2 ES7 ES8 ES9 ES10"/>
+ </flow>
+    <flow id="carflow_5.8" type="bicycle_3" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+           <route id="route5.8" edges="EE1 ES3 ES4 ES5"/>
+ </flow>
+    <flow id="carflow_5.9" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="20">
+           <route id="route5.9" edges="EE1 EE2 EE3"/>
+ </flow>
+
+
+    <personFlow id="person5.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EE1 EE2 ES7 EE7 EE8 ES12 ES13 ES14 ES15 ES16 "/>
+    </personFlow>
+    <personFlow id="person5.1" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="50" >
+       <walk edges="EE1 EE2 ES7 ES8 ES9 ES10"/>
+    </personFlow>
+    <personFlow id="person5.2" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="50" >
+       <walk edges=" EE1 EE2 EE3"/>
+    </personFlow>
+
+
+
+
+
+
+<!-- <The crossroad of East>-->
+    <flow id="carflow_6.0" type="car_4" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="60">
+           <route id="route6.0" edges="ES11 ES12 ES13 ES14 ES15 ES16"/>
+ </flow>
+    <flow id="carflow_6.1" type="car_5" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+           <route id="route6.1" edges="ES11 EW8 EW7 EN7 EE3"/>
+ </flow>
+    <flow id="carflow_6.2" type="car_8" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+          <route id="route6.2" edges="ES11 EW8 EW7 EN7 EW2 EW1"/>
+ </flow>
+    <flow id="carflow_6.3" type="car_1" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="30">
+          <route id="route6.3" edges="ES11 EW8 EW7 ES8 ES9 ES10"/>
+ </flow>
+    <flow id="carflow_6.4" type="car_2" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+          <route id="route6.4" edges="ES11 EW8 EO4"/>
+ </flow>
+
+
+
+    <flow id="carflow_6.5" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+           <route id="route6.5" edges="ES11 ES12 ES13 ES14 ES15 ES16"/>
+ </flow>
+    <flow id="carflow_6.6" type="bicycle_2" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+           <route id="route6.6" edges="ES11 EW8 EW7 EN7 EE3"/>
+ </flow>
+    <flow id="carflow_6.7" type="bicycle_2" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+          <route id="route6.7" edges="ES11 EW8 EO4"/>
+ </flow>
+
+
+
+    <personFlow id="person6.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="50" >
+       <walk edges="ES11 ES12 ES13 ES14 ES15 ES16"/>
+    </personFlow>
+    <personFlow id="person6.1" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="40" >
+       <walk edges="ES11 EW8 EW7 EN7 EE3"/>
+    </personFlow>
+    <personFlow id="person6.2" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="ES11 EW8 EO4"/>
+    </personFlow>
+
+
+
+<!-- <The crossroad of Middle>-->
+  <flow id="carflow_7.0" type="car_1" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+          <route id="route7.0" edges="EE6 EE7 EE8 EN11"/>
+ </flow>
+    <flow id="carflow_7.1" type="car_2" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="30">
+          <route id="route7.1" edges="EE6 ES8 ES9 EW9"/>
+ </flow>
+    <flow id="carflow_7.2" type="car_3" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+          <route id="route7.2" edges="EE6 ES8 ES9 EE10 EE11 ES16"/>
+ </flow>
+    <flow id="carflow_7.3" type="car_4" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="30">
+          <route id="route7.3" edges="EE6 ES8 ES9 EE10 EE11 EN15 EN14 EN13 EN12 EW8 -EO3"/>
+ </flow>
+
+
+
+    <flow id="carflow_7.4" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="20">
+          <route id="route7.4" edges="EE6 EE7 EE8 EN11"/>
+ </flow>
+    <flow id="carflow_7.5" type="bicycle_2" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="30">
+          <route id="route7.5" edges="EE6 ES8 ES9 EW9"/>
+ </flow>
+    <flow id="carflow_7.6" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="20">
+          <route id="route7.6" edges="EE6 ES8 ES9 EE10 EE11 ES16"/>
+ </flow>
+    <flow id="carflow_7.7" type="bicycle_2" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="20">
+          <route id="route7.7" edges="EE6 ES8 ES9 EE10 EE11 EN15 EN14 EN13 EN12 EW8 -EO3"/>
+ </flow>
+
+
+    <personFlow id="person7.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="50" >
+       <walk edges=" EE6 ES8 ES9 EE10 EE11 EN15 EN14 EN13 EN12 EW8 -EO3"/>
+    </personFlow>
+    <personFlow id="person7.1" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges=" EE6 ES8 ES9 EE10 EE11 ES16"/>
+    </personFlow>
+    <personFlow id="person7.2" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="40" >
+       <walk edges=" EE6 EE7 EE8 EN11"/>
+    </personFlow>
+    <personFlow id="person7.3" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EE6 ES8 ES9 EW9"/>
+    </personFlow>
+
+
+
+
+<!-- <The crossroad of JC3>-->
+    <flow id="carflow_8.0" type="car_2" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="70">
+          <route id="route8.0" edges="EO1 EW4 EN4 EN3 EN2 EN1"/>
+    </flow>
+
+
+    <flow id="carflow_8.1" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="50">
+          <route id="route8.1" edges="EO1 EW4 EN4 EN3 EN2 EN1"/>
+    </flow>
+
+
+    <personFlow id="person8.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EO1 EW4 EN4 EN3 EN2 EN1"/>
+    </personFlow>
+    <personFlow id="person8.1" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EP1 -EO1"/>
+    </personFlow>
+
+
+
+
+
+
+<!-- <The crossroad of JC9>-->
+    <flow id="carflow_9.0" type="car_1" begin="0" end="999999" beg="0" departLane="best"
+          departPos="random" departSpeed="random" vehsPerHour="70">
+          <route id="route9.0" edges="EO3 EO4"/>
+    </flow>
+
+
+    <flow id="carflow_9.1" type="bicycle_1" begin="0" end="999999" beg="0" departLane="1"
+          departPos="random" departSpeed="random" vehsPerHour="40">
+          <route id="route9.1" edges="-EO4 EE8 EN11"/>
+    </flow>
+
+    <personFlow id="person9.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EO3 EO4"/>
+    </personFlow>
+    <personFlow id="person9.1" type="DEFAULT_PEDTYPE" begin="1" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges=" -EO4 -EO3"/>
+  </personFlow>
+
+
+
+
+
+    <!-- <The crossroad of JC11>-->
+
+    <personFlow id="person10.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EP5 EP4"/>
+    </personFlow>
+    <personFlow id="person10.1" type="DEFAULT_PEDTYPE" begin="1" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EP4 EP5"/>
+  </personFlow>
+
+
+
+    <!-- <The crossroad of JC12>-->
+    <personFlow id="person11.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EP7 EP6"/>
+    </personFlow>
+    <personFlow id="person11.1" type="DEFAULT_PEDTYPE" begin="1" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EP6 EP7"/>
+  </personFlow>
+
+
+
+
+    <!-- <The crossroad of JC7>-->
+    <personFlow id="person12.0" type="DEFAULT_PEDTYPE" begin="0" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EP3 EP2"/>
+    </personFlow>
+    <personFlow id="person12.1" type="DEFAULT_PEDTYPE" begin="1" end="999999" departPos="random" personsPerHour="30" >
+       <walk edges="EP2 EP3"/>
+  </personFlow>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <route id="ru" edges="EW4 EN1"/>
+    <route id="rd" edges="EW4 ES4"/>
+
+    <route id="dr" edges="EN5 EE2"/>
+    <route id="du" edges="EN5 EN4"/>
+
+    <route id="ud" edges="ES4 ES5"/>
+    <route id="ur" edges="ES1 EE4"/>
+    <route id="circle" edges="a1toa2 a2toa3 a3toa4 a4toa1"/>
+
+    <vehicle id="collector" type="car_1" route="circle" depart="0"/>
+
+
+
+</routes>

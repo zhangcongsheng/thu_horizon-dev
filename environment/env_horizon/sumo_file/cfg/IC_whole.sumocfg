@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <input>
+        <net-file value="../IC.net.xml"/>
+        <route-files value="../routes/IC_whole.rou.xml"/>
+        <additional-files value="../IC.add.xml"/>
+    </input>
+
+    <time>
+        <step-length value="0.1" />
+    </time>
+        <lanechange.duration value="3"/>
+        
+
+</configuration>
